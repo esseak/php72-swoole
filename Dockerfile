@@ -20,8 +20,8 @@ RUN set -ex \
     && apk add --no-cache git mysql-client curl openssh-client icu libpng freetype libjpeg-turbo postgresql-dev libffi-dev \
     && apk add --no-cache --virtual build-dependencies icu-dev libxml2-dev freetype-dev libpng-dev libjpeg-turbo-dev g++ make autoconf \
     && docker-php-source extract \
-    && pecl install swoole redis \
-    && docker-php-ext-enable redis swoole \
+    && pecl install swoole redis mongodb \
+    && docker-php-ext-enable redis swoole mongodb \
     && docker-php-source delete \
     && docker-php-ext-configure pgsql -with-pgsql=/usr/local/pgsql \
     && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
