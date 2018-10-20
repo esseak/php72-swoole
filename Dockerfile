@@ -16,8 +16,8 @@ LABEL Maintainer="esseak <esseak@gmail.com>" \
       org.label-schema.docker.schema-version="1.0"
 
 RUN set -ex \
-      && cp /etc/apk/repositories /etc/apk/repositories.bak
-      && echo "http://mirrors.aliyun.com/alpine/v3.4/main/" > /etc/apk/repositories
+      && cp /etc/apk/repositories /etc/apk/repositories.bak \
+      && echo "http://mirrors.aliyun.com/alpine/v3.4/main/" > /etc/apk/repositories \
   	&& apk update \
     && apk add --no-cache git mysql-client curl openssh-client icu libpng freetype libjpeg-turbo postgresql-dev libffi-dev \
     && apk add --no-cache --virtual build-dependencies icu-dev libxml2-dev freetype-dev libpng-dev libjpeg-turbo-dev g++ make autoconf \
