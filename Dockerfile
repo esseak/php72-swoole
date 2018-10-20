@@ -5,13 +5,13 @@ ARG VCS_REF
 
 ENV COMPOSER_ALLOW_SUPERUSER 1
 
-LABEL Maintainer="Zaher Ghaibeh <z@zah.me>" \
+LABEL Maintainer="esseak <esseak@gmail.com>" \
       Description="Lightweight php 7.2 container based on alpine with Composer installed and swoole pecl installed." \
-      org.label-schema.name="zaherg/php72-swoole" \
+      org.label-schema.name="esseak/php72-swoole" \
       org.label-schema.description="Lightweight php 7.2 container based on alpine with Composer installed and swoole pecl installed." \
       org.label-schema.build-date=$BUILD_DATE \
       org.label-schema.version="1.2.3" \
-      org.label-schema.vcs-url="https://github.com/linuxjuggler/php72-swoole.git" \
+      org.label-schema.vcs-url="https://github.com/esseak/php72-swoole.git" \
       org.label-schema.vcs-ref=$VCS_REF \
       org.label-schema.docker.schema-version="1.0"
 
